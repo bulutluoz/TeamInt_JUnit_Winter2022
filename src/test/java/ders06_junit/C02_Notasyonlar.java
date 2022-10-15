@@ -29,7 +29,7 @@ public class C02_Notasyonlar {
         System.out.println("Test1 calisti");
     }
 
-    @Test
+    @Test @Ignore
     public void test2(){
         System.out.println("Test2 calisti");
     }
