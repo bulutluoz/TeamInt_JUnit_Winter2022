@@ -26,7 +26,6 @@ public class C05_KeyboardActions extends TestBase {
 
         driver.get("https://www.amazon.com");
 
-        /*
         // arama kutusuna nutella yazin
         WebElement aramaKutusu= driver.findElement(By.id("twotabsearchtextbox"));
         aramaKutusu.sendKeys("nutella");
@@ -38,9 +37,9 @@ public class C05_KeyboardActions extends TestBase {
         driver.navigate().back();
 
 
-         */
+
         // arama kutusuna actions class'ini kullanarak SamsungA71 yazdirin
-        WebElement aramaKutusu= driver.findElement(By.id("twotabsearchtextbox"));
+        aramaKutusu= driver.findElement(By.id("twotabsearchtextbox"));
         Actions actions=new Actions(driver);
         bekle(2);
         actions.click(aramaKutusu)

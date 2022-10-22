@@ -1,5 +1,6 @@
 package ders09_actionsClass;
 
+import com.github.javafaker.Faker;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -7,10 +8,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import utilities.TestBase;
 
-public class C06_FacebookKayit extends TestBase {
-
+public class C07_FakerClassKullanimi extends TestBase {
     @Test
     public void test01(){
+        // buradaki isim, soyisim, email, sifre gibi degerler icin
+        // rastgele isim olusturup kullanin
+
 
         //1- https://www.facebook.com adresine gidelim
         driver.get("https://www.facebook.com");
@@ -21,17 +24,19 @@ public class C06_FacebookKayit extends TestBase {
 
         WebElement isimKutusu= driver.findElement(By.xpath("//input[@name='firstname']"));
         Actions actions=new Actions(driver);
+        Faker faker= new Faker();
+        String email=faker.internet().emailAddress();
 
         actions.click(isimKutusu)
-                .sendKeys("Levent")
+                .sendKeys(faker.name().firstName())
                 .sendKeys(Keys.TAB)
-                .sendKeys("Celik")
+                .sendKeys(faker.name().lastName())
                 .sendKeys(Keys.TAB)
-                .sendKeys("fatih@gmail.com")
+                .sendKeys(email)
                 .sendKeys(Keys.TAB)
-                .sendKeys("fatih@gmail.com")
+                .sendKeys(email)
                 .sendKeys(Keys.TAB)
-                .sendKeys("12345Arti")
+                .sendKeys(faker.internet().password())
                 .sendKeys(Keys.TAB)
                 .sendKeys(Keys.TAB)
                 .sendKeys("13")
@@ -55,6 +60,5 @@ public class C06_FacebookKayit extends TestBase {
 
         bekle(25);
     }
-
 
 }
