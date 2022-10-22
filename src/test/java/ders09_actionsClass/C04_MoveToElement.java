@@ -10,7 +10,7 @@ import utilities.TestBase;
 public class C04_MoveToElement extends TestBase {
 
     @Test
-    public void test01() throws InterruptedException {
+    public void test01()  {
         // Yeni bir class olusturalim: MouseActions3
         //1- https://www.amazon.com/ adresine gidelim
         driver.get("https://www.amazon.com/");
@@ -26,6 +26,6 @@ public class C04_MoveToElement extends TestBase {
         //4- Acilan sayfada “Your Lists” yazisi oldugunu test edelim
         WebElement yourListElementi= driver.findElement(By.id("my-lists-tab"));
         Assert.assertTrue(yourListElementi.isDisplayed());
-        Thread.sleep(5000);
+        bekle(5);
     }
 }
