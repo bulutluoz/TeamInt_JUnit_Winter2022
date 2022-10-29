@@ -18,15 +18,6 @@ public class C01_BeforeClass {
     // uc ayri test method'u olusturup
     // Nutella, java ve Selenium icin arama yapip, arama sonuclarini yazdirin
 
-    /*
-      @BeforeClass ve @AfterClass notasyonlarinin kullanildigi method'lar
-      static olmak ZORUNDADIR
-
-      JUnit Test method'larini ongoremeyecegimiz bir sira ile calistirir
-      Test method'larini yazarken tamaminin bagimsiz olarak da
-      calistirilabilecegini goz onunde bulundurmaliyiz
-     */
-
     static WebDriver driver;
 
     @BeforeClass
@@ -64,9 +55,10 @@ public class C01_BeforeClass {
         System.out.println(aramaSonucElementi.getText());
     }
 
-
     @AfterClass
     public static void teardown(){
         driver.close();
     }
 }
+
+

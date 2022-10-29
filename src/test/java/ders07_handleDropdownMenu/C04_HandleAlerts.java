@@ -54,6 +54,7 @@ public class C04_HandleAlerts {
         driver.findElement(By.xpath("//*[text()='Click for JS Alert']")).click();
         Thread.sleep(2000);
         //		alert'deki OK butonuna tıklayın ve
+
         driver.switchTo().alert().accept();
 
         //		result mesajının “You successfully clicked an alert” oldugunu test edin.
@@ -72,7 +73,9 @@ public class C04_HandleAlerts {
         driver.findElement(By.xpath("//button[text()='Click for JS Confirm']")).click();
         Thread.sleep(2000);
         //		uyarıdaki Cancel butonuna tıklayın ve
+
         driver.switchTo().alert().dismiss();
+
         Thread.sleep(2000);
         //		result mesajının “successfuly” icermedigini test edin.
         String actualSonucYazisi= driver.findElement(By.xpath("//p[@id='result']")).getText();

@@ -36,7 +36,10 @@ public class C03_HandleDDM {
         Select select= new Select(ddmElementi);
         //	1.Index kullanarak Seçenek 1’i (Option 1) seçin ve yazdırın
         select.selectByIndex(1);
-        System.out.println(select.getFirstSelectedOption().getText());
+
+        System.out.println(    select.getFirstSelectedOption().getText()    );
+
+
         Thread.sleep(2000);
         //	2.Value kullanarak Seçenek 2'yi (Option 2) seçin ve yazdırın
         select.selectByValue("2");
@@ -48,6 +51,7 @@ public class C03_HandleDDM {
         System.out.println(select.getFirstSelectedOption().getText());
         Thread.sleep(2000);
         //	4.Tüm dropdown değerleri(value) yazdırın
+
         List<WebElement> optionsList= select.getOptions();
 
         for (WebElement eachWebElement: optionsList

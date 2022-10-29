@@ -22,31 +22,24 @@ public class C02_Before_After {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
     }
-
-
     @Test
     public void amazonTest(){
-
         driver.get("https://www.amazon.com");
         System.out.println(driver.getTitle());
     }
-
-
     @Test
     public void facebookTest(){
         driver.get("https://www.facebook.com");
         System.out.println(driver.getTitle());
-
     }
-
     @Test
     public void bestbuyTest(){
         driver.get("https://www.bestbuy.com");
         System.out.println(driver.getTitle());
     }
-
     @After
     public void tearDown(){
         driver.close();
     }
 }
+

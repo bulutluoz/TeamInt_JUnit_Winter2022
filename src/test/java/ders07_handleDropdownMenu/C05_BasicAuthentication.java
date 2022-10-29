@@ -55,7 +55,7 @@ public class C05_BasicAuthentication {
 
     @After
     public void teardown(){
-        driver.close();
+        //driver.close();
     }
 
 }

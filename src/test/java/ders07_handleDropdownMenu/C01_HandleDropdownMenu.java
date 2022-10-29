@@ -40,8 +40,11 @@ public class C01_HandleDropdownMenu {
         // amazona gidin
         driver.get("https://www.amazon.com");
         // Arama kutusunun solundaki search-in menusunden Electronics'i secin
+
         WebElement dropdownWebelement= driver.findElement(By.id("searchDropdownBox"));
+
         Select select= new Select(dropdownWebelement);
+
         select.selectByVisibleText("Electronics");
 
         // arama cubuguna Java yazip aratin
