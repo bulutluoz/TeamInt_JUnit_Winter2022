@@ -35,11 +35,12 @@ public class C04_ScreenshotWebelement extends TestBase {
         // 1.adim screenshot cekecegimiz webelementi locate edelim
 
         // 2. 3. ve 4. adimlar tum sayfa screenshot ile ayni
-        File tumSayfaSShot= new File("target/ScreenShot/SonucyazisiScrenshot.jpeg");
+
+        File istenenElementSShot= new File("target/ScreenShot/SonucyazisiScrenshot.jpeg");
 
         File geciciResim= sonucYaziElementi.getScreenshotAs(OutputType.FILE);
 
-        FileUtils.copyFile(geciciResim,tumSayfaSShot);
+        FileUtils.copyFile(geciciResim,istenenElementSShot);
 
     }
 }

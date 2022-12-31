@@ -19,6 +19,7 @@ public class C06_JSExecuter extends TestBase {
         WebElement sellLinki= driver.findElement(By.xpath("//a[text()='Sell']"));
 
         JavascriptExecutor jse= (JavascriptExecutor) driver;
+
         jse.executeScript("arguments[0].click();",sellLinki);
 
 
@@ -32,5 +33,22 @@ public class C06_JSExecuter extends TestBase {
         bekle(5);
 
         driver.switchTo().alert().accept();
+
+
+        driver.get("https://www.wisequarter.com");
+
+        bekle(2);
+        driver.findElement(By.xpath("//i[@class='eicon-close']")).click();
+        bekle(2);
+
+        WebElement beklen= driver.findElement(By.xpath("(//h3[@class='elementor-icon-box-title'])[1]"));
+        jse.executeScript("arguments[0].scrollIntoView();",beklen);
+
+        WebElement goToCareerPage= driver.findElement(By.xpath("//i[@class='fas fa-paper-plane']"));
+        goToCareerPage.click();
+
+        bekle(10);
+
+
     }
 }

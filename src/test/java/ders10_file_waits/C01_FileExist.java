@@ -46,9 +46,11 @@ public class C01_FileExist {
         // masa ustunde FileTesti diye bir klasor ve onun altinda deneme diye bir text dosyasi icin
 
         String dosyaYolu= System.getProperty("user.home")+"Desktop/FileTesti/deneme.txt";
+
+
         System.out.println(dosyaYolu);
 
-        System.out.println(Files.exists(Paths.get(dosyaYolu))); // true veya false
+        System.out.println(   Files.exists(Paths.get(dosyaYolu))    ); // true veya false
 
 
     }

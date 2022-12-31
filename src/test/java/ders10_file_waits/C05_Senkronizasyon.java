@@ -76,8 +76,9 @@ public class C05_Senkronizasyon {
         //7. It’s back mesajinin gorundugunu test edin
         // WebElement itsBackElementi= driver.findElement(By.id("message"));
 
-        WebElement itsBackElementi=
-                wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("message")));
+        WebElement itsBackElementi= wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("message")));
+
+
         Assert.assertTrue(itsBackElementi.isDisplayed());
     }
 }

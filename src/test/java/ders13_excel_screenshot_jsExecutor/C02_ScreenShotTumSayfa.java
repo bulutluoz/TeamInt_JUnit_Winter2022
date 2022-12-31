@@ -35,6 +35,7 @@ public class C02_ScreenShotTumSayfa extends TestBase {
 
         // 1- TakesScreenShot objesi olusturup
         //    deger olarak cast ettigimiz driver'i atayalim
+
         TakesScreenshot tss= (TakesScreenshot) driver;
 
         // 2- resmi kaydedecegimiz bir dosya olusturulur

@@ -30,9 +30,14 @@ public class C06_ExplicitlyWait {
         driver.findElement(By.xpath("//button[text()='Enable']")).click();
 
         WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(20));
+
         wait.until(ExpectedConditions.elementToBeClickable(textBoxElementi));
+
         //6. “It’s enabled!” mesajinin goruntulendigini dogrulayın.
+
         WebElement itsEnabledelementi= driver.findElement(By.xpath("//p[@id='message']"));
+
+
         Assert.assertTrue(itsEnabledelementi.isEnabled());
         //7. Textbox’in etkin oldugunu(enabled) dogrulayın.
 

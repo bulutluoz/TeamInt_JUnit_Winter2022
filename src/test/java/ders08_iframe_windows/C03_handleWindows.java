@@ -30,7 +30,9 @@ public class C03_handleWindows {
         //● Amazon anasayfa adresine gidin.
         driver.get("https://www.amazon.com");
         //● Sayfa’nin window handle degerini String bir degiskene atayin
+
         String ilkSayfaHandleDegeri= driver.getWindowHandle();
+
         //● Sayfa title’nin “Amazon” icerdigini test edin
         String expectedIcerik="Amazon";
         String actualTitle= driver.getTitle();
@@ -47,6 +49,8 @@ public class C03_handleWindows {
          */
 
         driver.switchTo().newWindow(WindowType.TAB);
+
+
         driver.get("https://www.wisequarter.com");
         //● Sayfa title’nin “Wise Quarter” icerdigini test edin
 

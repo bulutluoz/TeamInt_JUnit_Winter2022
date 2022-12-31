@@ -45,6 +45,7 @@ public class C02_handleWindows {
          */
 
         Set<String> windowHandlesSeti= driver.getWindowHandles();
+
         String ikinciSayfaWinHandleDegeri="";
 
         for (String eachHandleDegeri: windowHandlesSeti
@@ -56,6 +57,7 @@ public class C02_handleWindows {
         }
 
         driver.switchTo().window(ikinciSayfaWinHandleDegeri);
+        System.out.println(driver.getTitle());
 
         // Acilan sayfadaki en bastaki yazinin gorunur oldugunu
         WebElement baslikElementi= driver.findElement(By.tagName("h1"));
